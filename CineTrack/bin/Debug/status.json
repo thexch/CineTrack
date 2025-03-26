@@ -1,0 +1,22 @@
+{
+  "Hunger Games": {
+    "status": "towatch",
+    "type": "Film"
+  },
+  "Hunger Games : La Révolte - Partie 1": {
+    "status": "inprogress",
+    "type": "Film"
+  },
+  "Hunger Games : L'Embrasement": {
+    "status": "watched",
+    "type": "Film"
+  },
+  "Hunger Games : La Ballade du serpent et de l'oiseau chanteur": {
+    "status": "towatch",
+    "type": "Film"
+  },
+  "Breaking Bad": {
+    "status": "inprogress",
+    "type": "Série TV"
+  }
+}
