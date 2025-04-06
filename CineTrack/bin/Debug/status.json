@@ -18,5 +18,13 @@
   "Breaking Bad": {
     "status": "inprogress",
     "type": "Série TV"
+  },
+  "Star Wars : Le Réveil de la Force": {
+    "status": "watched",
+    "type": "Film"
+  },
+  "Rogue One : A Star Wars Story": {
+    "status": "towatch",
+    "type": "Film"
   }
 }
