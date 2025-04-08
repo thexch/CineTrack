@@ -5,6 +5,7 @@ using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace CineTrack
 {
@@ -15,6 +16,7 @@ namespace CineTrack
             InitializeComponent();
             DataContext = searchResult;
         }
+
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -22,10 +24,12 @@ namespace CineTrack
                 DragMove();
             }
         }
+
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
         public void UpdateJsonStatus(string title, string status, string mediaType)
         {
             string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "status.json");
@@ -45,10 +49,10 @@ namespace CineTrack
 
                 // Mettre à jour le statut et le type de média
                 statusDictionary[title] = new Dictionary<string, string>
-        {
-            { "status", status },
-            { "type", mediaType }
-        };
+                {
+                    { "status", status },
+                    { "type", mediaType }
+                };
 
                 string updatedJson = JsonConvert.SerializeObject(statusDictionary, Formatting.Indented);
                 File.WriteAllText(jsonFilePath, updatedJson);
@@ -82,9 +86,17 @@ namespace CineTrack
             {
                 // Mettre à jour le fichier JSON avec le nouveau statut et le type de média
                 UpdateJsonStatus(searchResult.Title, status, searchResult.MediaType);
+
+                // Afficher le message de confirmation dans le Popup
+                PopupMessage.Text = $"{searchResult.Title} a été marqué comme {status}.";
+                ConfirmationPopup.IsOpen = true;
+
+                // Fermer le Popup après 2 secondes
+                Task.Delay(2000).ContinueWith(_ =>
+                {
+                    Dispatcher.Invoke(() => ConfirmationPopup.IsOpen = false);
+                });
             }
         }
-
-
     }
 }

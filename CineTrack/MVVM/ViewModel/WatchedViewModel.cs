@@ -56,6 +56,7 @@ namespace CineTrack.MVVM.ViewModel
         public WatchedViewModel()
         {
             MediaList = new ObservableCollection<SearchResult>();
+            MediaList.CollectionChanged += (s, e) => UpdateStatistics();
         }
 
         private void UpdateStatistics()

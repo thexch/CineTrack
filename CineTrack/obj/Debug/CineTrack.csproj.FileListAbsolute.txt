@@ -35,3 +35,14 @@ C:\Users\Théo\Documents\Github\CineTrack\CineTrack\obj\Debug\MVVM\View\InProgre
 C:\Users\Théo\Documents\Github\CineTrack\CineTrack\obj\Debug\MVVM\View\WatchedView.baml
 C:\Users\Théo\Documents\Github\CineTrack\CineTrack\obj\Debug\MVVM\View\DetailsWindow.baml
 C:\Users\Théo\Documents\Github\CineTrack\CineTrack\obj\Debug\MVVM\View\DetailsWindow.g.cs
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\MaterialDesignColors.dll
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\LiveCharts.dll
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\LiveCharts.pdb
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\LiveCharts.xml
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Théo\Documents\Github\CineTrack\CineTrack\bin\Debug\LiveCharts.Wpf.xml

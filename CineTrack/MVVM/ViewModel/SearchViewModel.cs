@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Input;
+using CineTrack.Core; 
+
 
 namespace CineTrack.MVVM.ViewModel
 {
-    class SearchViewModel
+    public class SearchViewModel : ObservableObject
     {
+       
     }
 }

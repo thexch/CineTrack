@@ -8,7 +8,7 @@
 
     <Grid>
         <StackPanel Margin="10">
-            <TextBlock FontWeight="Bold" FontSize="16">
+            <TextBlock FontWeight="Bold" FontSize="16" FontFamily="/Fonts/#Poppins" Foreground="White">
                 <Run Text="{Binding MovieCount, StringFormat=Nombre de films : {0}}"/>
                 <Run Text=" | "/>
                 <Run Text="{Binding TvShowCount, StringFormat=Nombre de séries : {0}}"/>

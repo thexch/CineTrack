@@ -4,10 +4,8 @@
              xmlns:local="clr-namespace:CineTrack"
              xmlns:viewModel="clr-namespace:CineTrack.MVVM.ViewModel"
              xmlns:view="clr-namespace:CineTrack.MVVM.View"
-
-             
-
              StartupUri="MainWindow.xaml">
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -16,6 +14,7 @@
 
             </ResourceDictionary.MergedDictionaries>
 
+            <!-- Tes DataTemplates -->
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
             </DataTemplate>
@@ -31,7 +30,6 @@
             <DataTemplate DataType="{x:Type viewModel:InProgressViewModel}">
                 <view:InProgressView/>
             </DataTemplate>
-            
 
         </ResourceDictionary>
     </Application.Resources>

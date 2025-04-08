@@ -26,5 +26,21 @@
   "Rogue One : A Star Wars Story": {
     "status": "towatch",
     "type": "Film"
+  },
+  "Bullet Train": {
+    "status": "towatch",
+    "type": "Film"
+  },
+  "Spider-Man : Across the Spider-Verse": {
+    "status": "inprogress",
+    "type": "Film"
+  },
+  "Batman": {
+    "status": "watched",
+    "type": "Film"
+  },
+  "Hunger": {
+    "status": "inprogress",
+    "type": "Film"
   }
 }

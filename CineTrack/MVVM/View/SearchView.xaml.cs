@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using TMDbLib.Client;
 
 namespace CineTrack.MVVM.View
@@ -30,7 +31,28 @@ namespace CineTrack.MVVM.View
             {
                 DefaultLanguage = "fr-FR" // Définit la langue en français
             };
+
+            SearchBox.Text = "Rechercher un film ou une série...";
+            SearchBox.Foreground = new SolidColorBrush(Colors.Gray);
         }
+        private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (SearchBox.Text == "Rechercher un film ou une série...")
+            {
+                SearchBox.Text = string.Empty;
+                SearchBox.Foreground = new SolidColorBrush(Colors.Black);
+            }
+        }
+
+        private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SearchBox.Text))
+            {
+                SearchBox.Text = "Rechercher un film ou une série...";
+                SearchBox.Foreground = new SolidColorBrush(Colors.Gray);
+            }
+        }
+
 
         private async void SearchButton_Click(object sender, RoutedEventArgs e)
         {

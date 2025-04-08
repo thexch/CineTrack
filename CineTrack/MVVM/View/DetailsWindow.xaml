@@ -65,6 +65,13 @@
                 </StackPanel>
                
             </Grid>
+            <Popup Name="ConfirmationPopup" Width="300" Height="150" IsOpen="False" Placement="Center">
+                <Border Background="White" BorderBrush="SteelBlue" BorderThickness="2" Padding="20">
+                    <StackPanel>
+                        <TextBlock Name="PopupMessage" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Foreground="SteelBlue" TextWrapping="Wrap" Margin="10"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
         </Grid>
     </Border>
 </Window>
