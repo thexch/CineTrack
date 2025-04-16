@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using CineTrack.MVVM.ViewModel;
 
 namespace CineTrack.MVVM.View
 {
@@ -10,6 +11,7 @@ namespace CineTrack.MVVM.View
         public TowatchView()
         {
             InitializeComponent();
+            this.DataContext = new TowatchViewModel(); 
         }
     }
 }

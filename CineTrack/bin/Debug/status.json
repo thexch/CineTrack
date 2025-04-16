@@ -1,46 +1,82 @@
 {
-  "Hunger Games": {
+  "131631": {
     "status": "towatch",
-    "type": "Film"
+    "type": "Film",
+    "title": "Hunger Games : La Révolte - Partie 1",
+    "poster": "https://image.tmdb.org/t/p/w500/4LzjVMUit99buiiuhqW4pe0OhmA.jpg",
+    "overview": "Katniss Everdeen s’est réfugiée dans le District 13 après avoir détruit à jamais l’arène et les Jeux. Sous le commandement de la Présidente Coin, chef du district, et suivant les conseils de ses amis en qui elle a toute confiance, Katniss déploie ses ailes pour devenir le symbole de la rébellion. Elle va se battre pour sauver Peeta et libérer le pays tout entier, à qui son courage a redonné espoir.",
+    "rating": "6,815",
+    "releaseYear": "2014",
+    "mainActors": "Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth"
   },
-  "Hunger Games : La Révolte - Partie 1": {
-    "status": "inprogress",
-    "type": "Film"
-  },
-  "Hunger Games : L'Embrasement": {
+  "70160": {
     "status": "watched",
-    "type": "Film"
+    "type": "Film",
+    "title": "Hunger Games",
+    "poster": "https://image.tmdb.org/t/p/w500/wSvsjqyRWk5xku9yEUNZYFwUF87.jpg",
+    "overview": "Dans un proche futur, les États‐Unis sont devenus un gouvernement fédéral dystopique dans lequel chacun des 12 districts doit envoyer un garçon et une fille combattre lors d’un événement annuel télévisé, « Les Hunger Games ». La seule issue à ces jeux pour les « Tributs » est de tuer ou d’être tué. Lorsque la petite sœur de Katniss est tirée au sort pour y participer, celle‐ci décide de prendre sa place.",
+    "rating": "7,215",
+    "releaseYear": "2012",
+    "mainActors": "Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth"
   },
-  "Hunger Games : La Ballade du serpent et de l'oiseau chanteur": {
-    "status": "towatch",
-    "type": "Film"
-  },
-  "Breaking Bad": {
+  "101299": {
     "status": "inprogress",
-    "type": "Série TV"
+    "type": "Film",
+    "title": "Hunger Games : L'Embrasement",
+    "poster": "https://image.tmdb.org/t/p/w500/32mRJXEjmpcVYcQFvzvXCLPsUgS.jpg",
+    "overview": "Après les premiers Hunger Games, Katniss est devenue le symbole de la rébellion. Le peuple de Panem est impatient de la retrouver pour la grande Tournée de la victoire. Mais Katniss va devoir prouver au Capitole et au Président Snow que ses sentiments envers Peeta étaient sincères afin de sauver ceux qu’elle aime…",
+    "rating": "7,426",
+    "releaseYear": "2013",
+    "mainActors": "Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth"
   },
-  "Star Wars : Le Réveil de la Force": {
+  "131634": {
+    "status": "towatch",
+    "type": "Film",
+    "title": "Hunger Games : La Révolte - Partie 2",
+    "poster": "https://image.tmdb.org/t/p/w500/ojFCU0K7Err8n87VOONrnrCcQxj.jpg",
+    "overview": "Alors que Panem est ravagé par une guerre désormais totale, Katniss et le Président Snow vont s’affronter pour la dernière fois. Katniss et ses plus proches amis – Gale, Finnick, et Peeta – sont envoyés en mission pour le District 13 : ils vont risquer leur vie pour tenter d’assassiner le Président Snow, qui s’est juré de détruire Katniss. Les pièges mortels, les ennemis et les choix déchirants qui attendent Katniss seront des épreuves bien pires que tout ce qu’elle a déjà pu affronter dans l’arène…",
+    "rating": "6,898",
+    "releaseYear": "2015",
+    "mainActors": "Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth"
+  },
+  "718930": {
     "status": "watched",
-    "type": "Film"
+    "type": "Film",
+    "title": "Bullet Train",
+    "poster": "https://image.tmdb.org/t/p/w500/uJvMXO1DNEER2lZocNjJy2zXtYs.jpg",
+    "overview": "Coccinelle est un assassin malchanceux et particulièrement déterminé à accomplir sa nouvelle mission paisiblement après que trop d'entre elles aient déraillé. Mais le destin en a décidé autrement et l'embarque dans le train le plus rapide au monde aux côtés d'adversaires redoutables qui ont tous un point commun, mais dont les intérêts divergent radicalement… Il doit alors tenter par tous les moyens de descendre du train.",
+    "rating": "7,44",
+    "releaseYear": "2022",
+    "mainActors": "Brad Pitt, Joey King, Aaron Taylor-Johnson"
   },
-  "Rogue One : A Star Wars Story": {
-    "status": "towatch",
-    "type": "Film"
-  },
-  "Bullet Train": {
-    "status": "towatch",
-    "type": "Film"
-  },
-  "Spider-Man : Across the Spider-Verse": {
+  "1396": {
     "status": "inprogress",
-    "type": "Film"
+    "type": "Série TV",
+    "title": "Breaking Bad",
+    "poster": "https://image.tmdb.org/t/p/w500/tP2wgZfzkZxL18jImD2YXqEUXQA.jpg",
+    "overview": "Walter White, professeur de chimie dans un lycée d'Albuquerque au Nouveau-Mexique, est atteint d'un cancer pulmonaire en phase terminale. Il s'associe à Jesse Pinkman, un de ses anciens élèves, cancre, toxicomane et dealer mais initier au monde des drogues afin d'assurer l'avenir financier de sa famille après son décès. L'improbable duo va alors synthétiser et commercialiser la plus pure méthamphétamine en cristaux jamais vue aux Amériques.",
+    "rating": "8,923",
+    "releaseYear": "2008",
+    "mainActors": "Bryan Cranston, Aaron Paul, Anna Gunn"
   },
-  "Batman": {
-    "status": "watched",
-    "type": "Film"
+  "120": {
+    "status": "towatch",
+    "type": "Film",
+    "title": "Le Seigneur des anneaux : La Communauté de l'anneau",
+    "poster": "https://image.tmdb.org/t/p/w500/5OPg6M0yHr21Ovs1fni2H1xpKuF.jpg",
+    "overview": "Le jeune hobbit Frodon Sacquet hérite d'un anneau. Il s'agit de l'Anneau Unique, instrument de pouvoir absolu qui permettrait à Sauron, de régner sur la Terre du Milieu et de réduire en esclavage ses peuples… À moins que Frodon et ses fidèles compagnons ne parviennent à emporter l'Anneau jusqu'en Mordor, lieu où il a été forgé, et à le détruire pour toujours…",
+    "rating": "8,419",
+    "releaseYear": "2001",
+    "mainActors": "Elijah Wood, Ian McKellen, Viggo Mortensen"
   },
-  "Hunger": {
+  "140607": {
     "status": "inprogress",
-    "type": "Film"
+    "type": "Film",
+    "title": "Star Wars : Le Réveil de la Force",
+    "poster": "https://image.tmdb.org/t/p/w500/zKZ1iF1ABqL7a16u6Im8JTQKp7H.jpg",
+    "overview": "Il y a bien longtemps, dans une galaxie lointaine… Luke Skywalker est porté disparu. Le pilote Poe est en mission secrète sur une planète pour le retrouver. Au moment où la diabolique armée \"Premier Ordre\" apparaît en détruisant tout sur son passage, il arrive à cacher la position géographique de l'ancien maître Jedi dans son droïde BB-8. Capturé par les larbins du machiavélique Kylo Ren, Poe est libéré par le soldat ennemi Finn qui est en pleine crise existentielle. Pendant ce temps, BB-8 est recueillie par Rey, une pilleuse d'épaves qui sera bientôt plongée dans une quête qui la dépasse.",
+    "rating": "7,262",
+    "releaseYear": "2015",
+    "mainActors": "Harrison Ford, Mark Hamill, Carrie Fisher"
   }
 }

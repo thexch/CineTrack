@@ -10,6 +10,7 @@ namespace CineTrack.MVVM.ViewModel
 {
     public class HomeViewModel : ObservableObject
     {
+
         private int _totalMoviesToWatch;
         public int TotalMoviesToWatch
         {
@@ -113,6 +114,10 @@ namespace CineTrack.MVVM.ViewModel
         {
             // Initialiser les statistiques
             UpdateGlobalStatistics();
+            Core.StatusDataChanged.OnStatusUpdated += () =>
+            {
+                UpdateGlobalStatistics(); // Actualisation auto
+            };
         }
 
         private void UpdateGlobalStatistics()

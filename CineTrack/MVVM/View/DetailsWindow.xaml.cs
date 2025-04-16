@@ -30,7 +30,7 @@ namespace CineTrack
             this.Close();
         }
 
-        public void UpdateJsonStatus(string title, string status, string mediaType)
+        public void UpdateJsonStatus(SearchResult result, string status)
         {
             string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "status.json");
             Dictionary<string, Dictionary<string, string>> statusDictionary;
@@ -47,15 +47,24 @@ namespace CineTrack
                     statusDictionary = new Dictionary<string, Dictionary<string, string>>();
                 }
 
-                // Mettre à jour le statut et le type de média
-                statusDictionary[title] = new Dictionary<string, string>
-                {
-                    { "status", status },
-                    { "type", mediaType }
-                };
+                // Utiliser l'ID comme clé
+                string key = result.Id.ToString();
+
+                statusDictionary[key] = new Dictionary<string, string>
+        {
+            { "status", status },
+            { "type", result.MediaType },
+            { "title", result.Title },
+            { "poster", result.PosterPath },
+            { "overview", result.Overview },
+            { "rating", result.Rating },
+            { "releaseYear", result.ReleaseYear },
+            { "mainActors", result.MainActors }
+        };
 
                 string updatedJson = JsonConvert.SerializeObject(statusDictionary, Formatting.Indented);
                 File.WriteAllText(jsonFilePath, updatedJson);
+                Core.StatusDataChanged.Raise();
                 Console.WriteLine($"Statut mis à jour dans {jsonFilePath}");
             }
             catch (Exception ex)
@@ -63,6 +72,7 @@ namespace CineTrack
                 Console.WriteLine($"Erreur lors de la mise à jour du statut : {ex.Message}");
             }
         }
+
 
         private void MarkAsTowatch_Click(object sender, RoutedEventArgs e)
         {
@@ -84,19 +94,17 @@ namespace CineTrack
             var searchResult = DataContext as SearchResult;
             if (searchResult != null)
             {
-                // Mettre à jour le fichier JSON avec le nouveau statut et le type de média
-                UpdateJsonStatus(searchResult.Title, status, searchResult.MediaType);
+                UpdateJsonStatus(searchResult, status);
 
-                // Afficher le message de confirmation dans le Popup
                 PopupMessage.Text = $"{searchResult.Title} a été marqué comme {status}.";
                 ConfirmationPopup.IsOpen = true;
 
-                // Fermer le Popup après 2 secondes
                 Task.Delay(2000).ContinueWith(_ =>
                 {
                     Dispatcher.Invoke(() => ConfirmationPopup.IsOpen = false);
                 });
             }
         }
+
     }
 }

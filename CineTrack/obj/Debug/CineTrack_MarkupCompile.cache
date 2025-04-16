@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Théo\Documents\Github\CineTrack\CineTrack\obj\Debug\
+C:\Users\theoc\Documents\Github\CineTrack\CineTrack\obj\Debug\
 CineTrack
 none
 false
 DEBUG;TRACE
-C:\Users\Théo\Documents\Github\CineTrack\CineTrack\App.xaml
+C:\Users\theoc\Documents\Github\CineTrack\CineTrack\App.xaml
 9-849328564
 
-202080039717
-1241557170408
+211605471308
+124-1750474012
 MainWindow.xaml;MVVM\View\DetailsWindow.xaml;MVVM\View\InProgressView.xaml;MVVM\View\SearchView.xaml;MVVM\View\HomeView.xaml;MVVM\View\TowatchView.xaml;MVVM\View\WatchedView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
 
 False

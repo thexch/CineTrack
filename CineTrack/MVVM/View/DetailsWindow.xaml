@@ -5,21 +5,96 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CineTrack"
         mc:Ignorable="d"
-        Height="450" Width="800"
+        Height="500" Width="850"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
 
-    <Border Background="#272537" CornerRadius="20">
+    <!-- 🎨 STYLES PERSONNALISÉS -->
+    <Window.Resources>
+
+        <!-- ScrollBar custom avec Thumb stylée -->
+        <Style TargetType="ScrollBar">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollBar">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Track Name="PART_Track" IsDirectionReversed="true">
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton Command="ScrollBar.LineUpCommand"
+                                                  Background="Transparent"
+                                                  IsEnabled="False"
+                                                  Height="0"/>
+                                </Track.DecreaseRepeatButton>
+                                <Track.Thumb>
+                                    <Thumb>
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Border Background="#FF3C3C" CornerRadius="4"/>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton Command="ScrollBar.LineDownCommand"
+                                                  Background="Transparent"
+                                                  IsEnabled="False"
+                                                  Height="0"/>
+                                </Track.IncreaseRepeatButton>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style de bouton personnalisé -->
+        <Style x:Key="StyledButton" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#3C3B4D"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#FF3C3C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF3C3C"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <!-- 🌌 Fenêtre principale -->
+    <Border Background="#1E1B2E" CornerRadius="20" Padding="10" BorderBrush="#FF3C3C" BorderThickness="1">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- Barre supérieure pour le déplacement -->
-            <Grid Grid.Row="0" Background="Transparent" MouseDown="Grid_MouseDown">
+            <!-- Barre supérieure -->
+            <Grid Grid.Row="0" Background="#2C293A" MouseDown="Grid_MouseDown">
                 <TextBlock Text="Détails"
                            FontSize="22"
                            Foreground="White"
@@ -28,8 +103,7 @@
                            Margin="20,0,0,0"
                            FontFamily="/Fonts/#Poppins"/>
 
-                <!-- Bouton de fermeture -->
-                <Button Content="X"
+                <Button Content="✕"
                         Width="30"
                         Height="30"
                         HorizontalAlignment="Right"
@@ -38,8 +112,9 @@
                         Background="Transparent"
                         BorderBrush="Transparent"
                         Foreground="White"
-                        FontSize="16"
+                        FontSize="18"
                         FontWeight="Bold"
+                        Cursor="Hand"
                         Click="CloseButton_Click"/>
             </Grid>
 
@@ -51,24 +126,46 @@
                 </Grid.ColumnDefinitions>
 
                 <Image Source="{Binding PosterPath}" Width="200" Height="300" Margin="10"/>
-                <StackPanel Grid.Column="1" Margin="10">
-                    <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="24"/>
-                    <TextBlock Text="{Binding ReleaseYear}" FontStyle="Italic" FontSize="18"/>
-                    <TextBlock Text="{Binding Overview}" TextWrapping="Wrap" FontSize="16"/>
-                    <TextBlock Text="{Binding Rating}" FontSize="16"/>
-                    <TextBlock Text="{Binding MainActors}" FontSize="16"/>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                        <Button Content="À voir" Click="MarkAsTowatch_Click" Margin="5"/>
-                        <Button Content="En cours" Click="MarkAsInProgress_Click" Margin="5"/>
-                        <Button Content="Déjà vu" Click="MarkAsWatched_Click" Margin="5"/>
-                    </StackPanel>
-                </StackPanel>
-               
-            </Grid>
-            <Popup Name="ConfirmationPopup" Width="300" Height="150" IsOpen="False" Placement="Center">
-                <Border Background="White" BorderBrush="SteelBlue" BorderThickness="2" Padding="20">
+
+                <!-- ScrollViewer pour éviter que le contenu dépasse -->
+                <ScrollViewer Grid.Column="1" Margin="20,0,0,0" VerticalScrollBarVisibility="Auto">
                     <StackPanel>
-                        <TextBlock Name="PopupMessage" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Foreground="SteelBlue" TextWrapping="Wrap" Margin="10"/>
+                        <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="26" Foreground="White" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding ReleaseYear}" FontStyle="Italic" FontSize="18" Foreground="#CCCCCC" Margin="0,0,0,10"/>
+                        <TextBlock Text="{Binding Overview}" TextWrapping="Wrap" FontSize="16" Foreground="#E0E0E0" Margin="0,0,0,10"/>
+
+                        <!-- Note formatée -->
+                        <TextBlock FontSize="16" Foreground="White" Margin="0,0,0,5">
+                            <Run Text="Note : " FontWeight="Bold"/>
+                            <Run Text="{Binding Rating, StringFormat={}{0:0.0}}"/>
+                            <Run Text="/10"/>
+                        </TextBlock>
+
+                        <TextBlock Text="{Binding MainActors}" FontSize="16" Foreground="White" Margin="0,0,0,15"/>
+
+                        <!-- Boutons de tri -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                            <Button Content="À voir" Click="MarkAsTowatch_Click" Style="{StaticResource StyledButton}" Margin="5"/>
+                            <Button Content="En cours" Click="MarkAsInProgress_Click" Style="{StaticResource StyledButton}" Margin="5"/>
+                            <Button Content="Déjà vu" Click="MarkAsWatched_Click" Style="{StaticResource StyledButton}" Margin="5"/>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- Popup de confirmation -->
+            <Popup Name="ConfirmationPopup" Width="300" Height="150" IsOpen="False" Placement="Center">
+                <Border Background="#2C293A" CornerRadius="10" BorderBrush="#FF3C3C" BorderThickness="2" Padding="20">
+                    <StackPanel>
+                        <TextBlock Name="PopupMessage"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"
+                                   Margin="10"/>
                     </StackPanel>
                 </Border>
             </Popup>
